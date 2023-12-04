@@ -13,8 +13,8 @@ all_cards += 1
 for i, line in enumerate(lines):
     cardno, numbers = line.split(': ')
     tickets, results = numbers.split(' | ')
-    tickets = list(filter(None, tickets.split(' ')))
-    results = list(filter(None, results.split(' ')))
+    tickets = tickets.split()
+    results = results.split()
 
     correct_nums = len(list(set(tickets) & set(results)))
     all_cards[i+1: i + correct_nums + 1] += all_cards[i] * 1
