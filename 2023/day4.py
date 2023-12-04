@@ -8,8 +8,7 @@ lines = get_data('task.txt')
 lines = [x.rstrip() for x in lines]
 
 total = 0
-all_cards = np.zeros(len(lines))
-all_cards += 1
+all_cards = np.ones(len(lines))
 for i, line in enumerate(lines):
     cardno, numbers = line.split(': ')
     tickets, results = numbers.split(' | ')
